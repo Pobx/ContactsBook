@@ -19,9 +19,11 @@
     <None Remove="sqlite-net-pcl" />
     <None Remove="Persistence\" />
     <None Remove="Models\" />
+    <None Remove="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />
     <Folder Include="Models\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
 </Project>
