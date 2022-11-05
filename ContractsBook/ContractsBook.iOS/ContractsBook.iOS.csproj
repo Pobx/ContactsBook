@@ -69,6 +69,8 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Persistence\SQLiteDb.cs" />
+    <None Include="Images\FavoriteProfile.png" />
+    <None Include="Images\NormalProfile.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -139,5 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />
+    <Folder Include="Images\" />
   </ItemGroup>
 </Project>
