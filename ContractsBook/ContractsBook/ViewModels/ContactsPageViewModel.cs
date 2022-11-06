@@ -6,6 +6,8 @@ using ContractsBook.Views;
 using Xamarin.Forms;
 using System.Linq;
 using ContractsBook.Models;
+using Xamarin.Essentials;
+using Contact = ContractsBook.Models.Contact;
 
 namespace ContractsBook.ViewModels
 {
