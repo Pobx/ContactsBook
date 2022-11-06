@@ -32,7 +32,11 @@ namespace ContractsBook.ViewModels
             _contactStore = contactStore;
             _pageService = pageService;
 
-
+            LoadDataCommand = new Command(async () => await LoadData());
+            AddContactCommand = new Command(async () => await AddContact());
+            SelectContactCommand = new Command<ContactViewModel>(async c => await SelectContact(c));
+            DeleteContactCommand = new Command<ContactViewModel>(async c => await DeleteContact(c));
+            CallContactCommand = new Command<ContactViewModel>(async c => await CallContact(c));
         }
 
         private async Task LoadData()
