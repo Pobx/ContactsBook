@@ -4,7 +4,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using ContractsBook.Views;
 using Xamarin.Forms;
-using Xamarin.Essentials;
+using System.Linq;
+using ContractsBook.Models;
 
 namespace ContractsBook.ViewModels
 {
@@ -37,6 +38,26 @@ namespace ContractsBook.ViewModels
             SelectContactCommand = new Command<ContactViewModel>(async c => await SelectContact(c));
             DeleteContactCommand = new Command<ContactViewModel>(async c => await DeleteContact(c));
             CallContactCommand = new Command<ContactViewModel>(async c => await CallContact(c));
+
+            MessagingCenter.Subscribe<ContactsDetailViewModel, Contact>(this, Events.ContactAdded, OnContactAdded);
+            MessagingCenter.Subscribe<ContactsDetailViewModel, Contact>(this, Events.ContactUpdated, OnContactUpdated);
+        }
+
+        private void OnContactAdded(ContactsDetailViewModel source, Contact contact)
+        {
+            Contacts.Add(new ContactViewModel(contact));
+        }
+
+        private void OnContactUpdated(ContactsDetailViewModel source, Contact contact)
+        {
+            var contactInList = Contacts.Single(c => c.Id == contact.Id);
+
+            contactInList.Id = contact.Id;
+            contactInList.FirstName = contact.FirstName;
+            contactInList.LastName = contact.LastName;
+            contactInList.Phone = contact.Phone;
+            contactInList.Email = contact.Email;
+            contactInList.IsFavorite = contact.IsFavorite;
         }
 
         private async Task LoadData()
