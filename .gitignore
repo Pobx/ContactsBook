@@ -403,3 +403,23 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+
+##############################################################################
+# Mono-specific patterns
+##############################################################################
+
+.dirstamp
+compile
+mono.h
+mono-*.tar.*
+mono_crash*
+tmpinst-dir.stamp
+extensions-config.h
+*.dylib.dSYM
+*.mlpd
+llvm/build/
+llvm/usr/
+sdks/builds/llvm-*/
+sdks/builds/android-*/
+mcs/build/compiler-server.log
