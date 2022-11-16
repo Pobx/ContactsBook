@@ -7,6 +7,21 @@ namespace ContractsBook.ViewModels
     public class ContactViewModel : BaseViewModel
     {
         public int Id { get; set; }
+
+        public ContactViewModel()
+        {
+        }
+
+        public ContactViewModel(Contact contact)
+        {
+            Id = contact.Id;
+            _firstName = contact.FirstName;
+            _lastName = contact.LastName;
+            Phone = contact.Phone;
+            Email = contact.Email;
+            IsFavorite = contact.IsFavorite;
+        }
+
         private string _firstName;
         public string FirstName
         {
@@ -82,15 +97,6 @@ namespace ContractsBook.ViewModels
 
                 return ImageSource.FromResource("ContactsBook.Assets.Images.NormalProfile.png");
             }
-        }
-
-        public ContactViewModel()
-        {
-        }
-
-        public ContactViewModel(Contact contact)
-        {
-            Id = contact.Id;
         }
     }
 }
