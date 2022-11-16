@@ -16,7 +16,7 @@
  TextColor="Red">
                     <ImageCell.ContextActions>
                         <MenuItem Text="Call" IsDestructive="True" Command="{Binding Source={x:Reference contactsPage}, Path=ViewModel.CallContactCommand}" CommandParameter="{Binding .}" />
-                        <MenuItem Text="Call" IsDestructive="True" Command="{Binding Source={x:Reference contactsPage}, Path=ViewModel.DeleteContactCommand}" CommandParameter="{Binding .}" />
+                        <MenuItem Text="Delete" IsDestructive="True" Command="{Binding Source={x:Reference contactsPage}, Path=ViewModel.DeleteContactCommand}" CommandParameter="{Binding .}" />
                     </ImageCell.ContextActions>
 
                 </ImageCell>
