@@ -22,6 +22,8 @@
     <None Remove="Assets\" />
     <None Remove="Assets\Images\" />
     <None Remove="Views\" />
+    <None Remove="Assets\Images\FavoriteProfile.png" />
+    <None Remove="Assets\Images\NormalProfile.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistence\" />
@@ -29,5 +31,9 @@
     <Folder Include="Assets\" />
     <Folder Include="Assets\Images\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\FavoriteProfile.png" />
+    <EmbeddedResource Include="Assets\Images\NormalProfile.png" />
   </ItemGroup>
 </Project>
