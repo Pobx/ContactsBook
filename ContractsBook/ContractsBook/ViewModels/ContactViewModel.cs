@@ -92,10 +92,10 @@ namespace ContractsBook.ViewModels
             {
                 if (IsFavorite)
                 {
-                    return ImageSource.FromResource("ContactsBook.Assets.Images.FavoriteProfile.png");
+                    return ImageSource.FromResource("ContractsBook.Assets.Images.FavoriteProfile.png");
                 }
 
-                return ImageSource.FromResource("ContactsBook.Assets.Images.NormalProfile.png");
+                return ImageSource.FromResource("ContractsBook.Assets.Images.NormalProfile.png");
             }
         }
     }
